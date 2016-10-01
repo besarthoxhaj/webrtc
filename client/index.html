@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="adapter.js"></script>
+    <script src="webrtc.js"></script>
+  </head>
+  <body>
+    <video id="localVideo" autoplay muted style="width:20%;"></video>
+    <video id="remoteVideo" autoplay style="width:20%;"></video>
+    <br />
+    <input type="button" id="start" onclick="start(true)" value="Start Video"></input>
+    <script type="text/javascript">
+      pageReady();
+    </script>
+  </body>
+</html>
