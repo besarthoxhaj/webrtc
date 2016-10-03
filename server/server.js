@@ -34,7 +34,9 @@ var httpServer = http.createServer.apply(
 // ----------------------------------------------------------------------------------------
 var wss = new WebSocketServer({server:httpServer});
 wss.on('connection', ws => {
+  console.log('connection');
   ws.on('message', message => {
+    console.log('message',message);
     const data = JSON.parse(message);
     wss.broadcast(message);
   });

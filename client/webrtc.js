@@ -47,6 +47,7 @@ function gotIceCandidate(event) {
 }
 
 function gotRemoteStream(event) {
+  console.log('gotRemoteStream');
   remoteVideo.src = window.URL.createObjectURL(event.stream);
 }
 
