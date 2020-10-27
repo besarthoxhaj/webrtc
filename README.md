@@ -1,7 +1,17 @@
-WebRTC Example
+WebRTC
 ==============
 
-## General
+Simple WebRTC working example with only `ws` as dependency.
+
+### Run
+
+```sh
+  git clone https://github.com/besarthoxhaj/webrtc.git
+  npm install
+  npm start
+```
+
+### General
 
 [Signaling protocol vs Transport protocol](https://www.quora.com/What-is-the-difference-between-XMPP-and-BOSH)
 
@@ -12,7 +22,7 @@ WebRTC Example
 
 > the answer from @Ichigo is correct, but it is a little bit bigger. Every ICE contains 'a node' of your network, until it has reached the outside. By this you send these ICE's to the other peer, so they know through what connection points they can reach you. See it as a large building: one is in the building, and needs to tell the other (who is not familiar) how to walk through it. Same here, if I have a lot of network devices, the incoming connection somehow needs to find the right way to my computer. By providing all nodes, the RTC connection finds the shortest route itself. So when you would connect to the computer next to you, which is connected to the same router/switch/whatever, it uses all ICE's and determine the shortest, and that is directly through that point. That your collegue got less ICE candidates has to do with the amount of devices it has to go through. Please note that every network adapter inside your computer which has an IP address (I have a vEthernet switch from hyper-v) it also creates an ICE for it.
 
-## Resources
+### Resources
 
 http://www.slideshare.net/Audiocod/nat-traversal-in-webrtc-context
 About SDP and SIP:
@@ -23,7 +33,7 @@ About SDP and SIP:
 > But it should be noted that the job of SIP is limited to only the setup and control of sessions. The details of the data exchange within a session e.g. the encoding or codec related to an audio/video media is not controlled by SIP and is taken care of by other protocols.
 
 
-## ICE
+### ICE
 
 http://www.slideshare.net/saghul/ice-4414037
 https://www.vocal.com/networking/ice-interactive-connectivity-establishment/
@@ -35,11 +45,11 @@ https://www.vocal.com/networking/ice-interactive-connectivity-establishment/
 
 ICE can be and often is slow. That's why [Trickle ICE](https://webrtchacks.com/trickle-ice/) appeared.
 
-## TURN
+### TURN
 
 https://www.viagenie.ca/publications/2008-08-cluecon-stun-turn-ice.pdf
 
-## References
+### References
 
 - Interactive Connectivity Establishment (ICE)
 - Network Address Translation (NAT)
@@ -61,7 +71,7 @@ https://www.viagenie.ca/publications/2008-08-cluecon-stun-turn-ice.pdf
 - Extensible Messaging and Presence Protocol (XMPP)
 - XML (Extensible Markup Language)
 
-## WebRTC in specs
+### WebRTC in specs
 
 APIs by W3C and protocols by IETF.
 
@@ -69,7 +79,7 @@ Coders:
  - Voice with [Opus and G.711](https://bloggeek.me/single-voice-codec-webrtc/)
  - Video with [VP8](https://en.wikipedia.org/wiki/VP8)
 
-## Example
+### Example
 
 Both parties exchange an [SDP](https://tools.ietf.org/html/rfc4566), through a signaling protocol server (in our case WebSockets).
 

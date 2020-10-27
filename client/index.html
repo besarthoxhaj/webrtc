@@ -4,13 +4,15 @@
     <script src="adapter.js"></script>
     <script src="webrtc.js"></script>
   </head>
-  <body>
-    <video id="localVideo" autoplay muted style="width:20%;"></video>
-    <video id="remoteVideo" autoplay style="width:20%;"></video>
+  <body style="background-color: rgb(36, 41, 46);">
+    <div>
+      <video id="localVideo" autoplay muted style="width:450px; display: block;"></video>
+      <video id="remoteVideo" autoplay style="width:450px; display: block;"></video>
+    </div>
     <br />
-    <input type="button" id="start" onclick="start(true)" value="Start Video"></input>
+    <input type="button" onclick="onStart(true)" value="Start Video"></input>
     <script type="text/javascript">
-      pageReady();
+      onPageReady();
     </script>
   </body>
 </html>
