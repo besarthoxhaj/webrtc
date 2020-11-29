@@ -1,12 +1,9 @@
 {
-  "name": "webrtc_example",
   "version": "1.0.0",
-  "description": "WebRTC Example",
   "main": "index.js",
   "dependencies": {
     "ws": "^1.1.1"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "node server/server.js"
   },
@@ -15,9 +12,5 @@
     "url": "git+https://github.com/besarthoxhaj/WebRTC-Example.git"
   },
   "author": "Bes",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/besarthoxhaj/WebRTC-Example/issues"
-  },
-  "homepage": "https://github.com/besarthoxhaj/WebRTC-Example#readme"
+  "license": "MIT"
 }
